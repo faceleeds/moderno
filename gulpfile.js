@@ -9,14 +9,14 @@ let gulp = require('gulp'),
     
 
 gulp.task('sass', function(){
-   return gulp.src('app/scss/style.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(rename({suffix:'.min'}))
-    .pipe(autoprefixer({
-    overrideBrowserslist:['last 8 versions']  
-    }))
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({stream:true}))
+   return gulp.src('app/scss/**/*.scss')
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(rename({suffix:'.min'}))
+        .pipe(autoprefixer({
+            overrideBrowserslist:['last 8 versions']  
+        }))
+        .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('style', function(){
