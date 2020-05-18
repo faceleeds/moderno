@@ -1,0 +1,33 @@
+html {
+   box-sizing: border-box; 
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    text-transform: uppercase;
+    background-color: #ccc;
+    text-decoration: none;
+}
+
+.test {
+    color: red;
+    &:hover {
+        color: green;
+        transition: all .5s;
+    }
+}
+
+.box {
+    background-color: tomato;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    transition: all .5s;
+    display: grid;
+}
+
+
